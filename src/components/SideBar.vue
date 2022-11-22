@@ -12,6 +12,7 @@
         </li>
       </ul>
     </div>
+
     <div class="content">
       <div
         v-for="item in arrItem"
@@ -53,7 +54,6 @@ export default {
       this.mySet?.forEach((item) => {
         {
           if (this.scrollY >= item.top && this.scrollY < item.bottom) {
-            console.log("@3");
             document.querySelector(`#${item.name}`).classList.add("active");
           } else {
             document.querySelector(`#${item.name}`).classList.remove("active");
